@@ -11,13 +11,19 @@
       "id": "c1",
       "text": "A deep-learning system predicts protein backbone structure to a median accuracy within experimental error on standard benchmarks.",
       "source_refs": ["s1"],
-      "verdict": { "supported": true, "note": "Abstract + Fig. 2 report median backbone RMSD within experimental error on CASP14." }
+      "verdict": {
+        "supported": true,
+        "note": "Abstract + Fig. 2 report median backbone RMSD within experimental error on CASP14."
+      }
     },
     {
       "id": "c2",
       "text": "The model's accuracy drops sharply for proteins with few evolutionary relatives.",
       "source_refs": ["s1", "s2"],
-      "verdict": { "supported": true, "note": "Stated as a limitation in s1; independently reproduced on an orphan-protein set in s2." }
+      "verdict": {
+        "supported": true,
+        "note": "Stated as a limitation in s1; independently reproduced on an orphan-protein set in s2."
+      }
     }
   ],
   "sources": [

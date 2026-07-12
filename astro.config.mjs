@@ -3,12 +3,11 @@ import { defineConfig } from 'astro/config';
 
 // GitHub Pages project site: https://yaanno.github.io/synth-paper/
 // `base` must match the repository name so asset/links resolve under the sub-path.
+//
+// Markdown is rendered by Astro's default Sätteri pipeline, which applies
+// GitHub-Flavored Markdown — including the footnote citations (`[^s1]`, ticket 03) —
+// out of the box, so no extra Markdown configuration is required.
 export default defineConfig({
   site: 'https://yaanno.github.io',
   base: '/synth-paper',
-  markdown: {
-    // GFM (incl. footnote citations, per ticket 03) is Astro's default; pinned here
-    // so the reader-facing `[^s1]` citation rendering never silently regresses.
-    gfm: true,
-  },
 });

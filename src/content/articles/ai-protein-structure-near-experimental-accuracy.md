@@ -1,11 +1,11 @@
 ---
-title: "An AI Model Cut Protein-Structure Guesswork to Near-Experimental Accuracy"
+title: 'An AI Model Cut Protein-Structure Guesswork to Near-Experimental Accuracy'
 description: >-
   A quietly consequential result: a machine-learning system now predicts protein
   shapes accurately enough to skip months of lab work — with real, stated limits.
 pubDate: 2026-07-12
-beat: "ai-in-science"
-byline: "The Synthetic Newspaper"
+beat: 'ai-in-science'
+byline: 'The Synthetic Newspaper'
 aiDisclosure: true
 corrections: []
 ---
@@ -22,7 +22,10 @@ independent replication on an orphan-protein set confirmed the model is weakest 
 where wet-lab validation is still required[^s2]. The tool shortens the queue; it does
 not empty it.
 
-[^s1]: Jumper, J. et al. "Highly accurate protein structure prediction with AlphaFold."
-    *Nature* 596 (2021). <https://doi.org/10.1038/s41586-021-03819-2>
-[^s2]: Example Lab. "Independent evaluation on orphan proteins." arXiv:2401.00001 (2026).
+[^s1]:
+    Jumper, J. et al. "Highly accurate protein structure prediction with AlphaFold."
+    _Nature_ 596 (2021). <https://doi.org/10.1038/s41586-021-03819-2>
+
+[^s2]:
+    Example Lab. "Independent evaluation on orphan proteins." arXiv:2401.00001 (2026).
     <https://arxiv.org/abs/2401.00001>
