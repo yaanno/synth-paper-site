@@ -1,0 +1,44 @@
+---
+import { getCollection, render } from 'astro:content';
+import type { GetStaticPaths } from 'astro';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Corrections from '../../components/Corrections.astro';
+import { formatDate } from '../../utils/date';
+
+export const getStaticPaths = (async () => {
+  const articles = await getCollection('articles');
+  return articles.map((entry) => ({
+    params: { slug: entry.id },
+    props: { entry },
+  }));
+}) satisfies GetStaticPaths;
+
+const { entry } = Astro.props;
+const { Content } = await render(entry);
+---
+
+<BaseLayout title={entry.data.title} description={entry.data.description}>
+  <article class="article">
+    <p class="article__beat">{entry.data.beat}</p>
+    <h1 class="article__title">{entry.data.title}</h1>
+    <p class="article__dek">{entry.data.description}</p>
+    <p class="article__meta">
+      {entry.data.byline} ·{' '}
+      <time datetime={entry.data.pubDate.toISOString()}>
+        {formatDate(entry.data.pubDate)}
+      </time>
+    </p>
+
+    <p class="article__ai-disclosure" role="note">
+      This article was researched, written, and adversarially verified by AI, then
+      published under the House byline. It is openly AI-run — no human reporter is
+      implied.
+    </p>
+
+    <div class="article__body">
+      <Content />
+    </div>
+
+    <Corrections corrections={entry.data.corrections} />
+  </article>
+</BaseLayout>

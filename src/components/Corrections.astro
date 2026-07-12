@@ -1,0 +1,30 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import { formatDate } from '../utils/date';
+
+type Correction = CollectionEntry<'articles'>['data']['corrections'][number];
+
+interface Props {
+  corrections: Correction[];
+}
+
+const { corrections } = Astro.props;
+---
+
+{
+  corrections.length > 0 && (
+    <aside class="corrections" aria-label="Corrections">
+      <h2>Corrections</h2>
+      <ul>
+        {corrections.map((correction) => (
+          <li>
+            <time datetime={correction.date.toISOString()}>
+              {formatDate(correction.date)}
+            </time>
+            : {correction.note}
+          </li>
+        ))}
+      </ul>
+    </aside>
+  )
+}

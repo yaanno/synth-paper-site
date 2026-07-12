@@ -1,0 +1,38 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { formatDate } from '../utils/date';
+
+const base = import.meta.env.BASE_URL;
+
+const articles = (await getCollection('articles')).sort(
+  (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
+);
+
+const href = (slug: string) => `${base.replace(/\/$/, '')}/articles/${slug}/`;
+---
+
+<BaseLayout
+  title="The Synthetic Newspaper"
+  description="Underreported, substantiated good news about AI — openly AI-run."
+>
+  <ul class="article-list">
+    {
+      articles.map((article) => (
+        <li class="article-list__item">
+          <p class="article-list__beat">{article.data.beat}</p>
+          <h2 class="article-list__title">
+            <a href={href(article.id)}>{article.data.title}</a>
+          </h2>
+          <p class="article-list__dek">{article.data.description}</p>
+          <p class="article-list__meta">
+            {article.data.byline} ·{' '}
+            <time datetime={article.data.pubDate.toISOString()}>
+              {formatDate(article.data.pubDate)}
+            </time>
+          </p>
+        </li>
+      ))
+    }
+  </ul>
+</BaseLayout>

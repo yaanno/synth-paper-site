@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "slug": "ai-protein-structure-near-experimental-accuracy",
+  "title": "An AI Model Cut Protein-Structure Guesswork to Near-Experimental Accuracy",
+  "pitch_id": "pitch-0007",
+  "beat": "ai-in-science",
+  "generated_by": "draft-node",
+  "model": "claude-sonnet-5",
+  "claims": [
+    {
+      "id": "c1",
+      "text": "A deep-learning system predicts protein backbone structure to a median accuracy within experimental error on standard benchmarks.",
+      "source_refs": ["s1"],
+      "verdict": { "supported": true, "note": "Abstract + Fig. 2 report median backbone RMSD within experimental error on CASP14." }
+    },
+    {
+      "id": "c2",
+      "text": "The model's accuracy drops sharply for proteins with few evolutionary relatives.",
+      "source_refs": ["s1", "s2"],
+      "verdict": { "supported": true, "note": "Stated as a limitation in s1; independently reproduced on an orphan-protein set in s2." }
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "scheme": "doi",
+      "identifier": "10.1038/s41586-021-03819-2",
+      "title": "Highly accurate protein structure prediction with AlphaFold",
+      "url": "https://doi.org/10.1038/s41586-021-03819-2",
+      "allowlist_id": "nature"
+    },
+    {
+      "id": "s2",
+      "scheme": "arxiv_id",
+      "identifier": "2401.00001",
+      "title": "Independent evaluation on orphan proteins",
+      "url": "https://arxiv.org/abs/2401.00001",
+      "allowlist_id": "arxiv-q-bio"
+    }
+  ]
+}
