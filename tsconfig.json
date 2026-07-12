@@ -1,5 +1,17 @@
 {
+  "$schema": "https://json.schemastore.org/tsconfig",
   "extends": "astro/tsconfigs/strict",
-  "include": [".astro/types.d.ts", "**/*"],
-  "exclude": ["dist"]
+  "compilerOptions": {
+    // Extra safety on top of Astro's strict base (these are not enabled by `strict`).
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
+    "noUncheckedIndexedAccess": true,
+    "noImplicitOverride": true,
+    // Only type-check our own source; config `.js`/`.mjs` files are parsed but not checked.
+    "checkJs": false
+  },
+  "include": [".astro/types.d.ts", "src/**/*", "test/**/*", "vitest.config.ts"],
+  "exclude": ["dist", "node_modules"]
 }
