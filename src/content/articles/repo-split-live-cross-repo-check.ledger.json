@@ -11,7 +11,10 @@
       "id": "c1",
       "text": "The pipeline can open a Publish-gate PR in a separate public site repo using the operator's gh credentials.",
       "source_refs": ["s1"],
-      "verdict": {"supported": true, "note": "Demonstrated by this PR under repo-split ticket 03."}
+      "verdict": {
+        "supported": true,
+        "note": "Demonstrated by this PR under repo-split ticket 03."
+      }
     }
   ],
   "sources": [
