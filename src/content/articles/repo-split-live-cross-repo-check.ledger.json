@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "slug": "repo-split-live-cross-repo-check",
+  "title": "Integration Check: Cross-Repo Publish Path Verified End to End",
+  "pitch_id": "pitch-repo-split-03",
+  "beat": "ai-in-science",
+  "generated_by": "integration-check",
+  "model": "n/a",
+  "claims": [
+    {
+      "id": "c1",
+      "text": "The pipeline can open a Publish-gate PR in a separate public site repo using the operator's gh credentials.",
+      "source_refs": ["s1"],
+      "verdict": {
+        "supported": true,
+        "note": "Demonstrated by this PR under repo-split ticket 03."
+      }
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "scheme": "url",
+      "identifier": "adr-0009",
+      "title": "Split repos: private pipeline, public site",
+      "url": "https://github.com/yaanno/synth-paper-site",
+      "allowlist_id": "internal-adr"
+    }
+  ]
+}
