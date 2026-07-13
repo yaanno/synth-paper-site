@@ -2,3 +2,9 @@ dist/
 .astro/
 node_modules/
 pnpm-lock.yaml
+
+# Generated publish artifacts from the pipeline (ADR-0009): the Publish node commits
+# machine-rendered <slug>.md + <slug>.ledger.json here. They are validated by the Astro
+# content-collection schema, not hand-formatted, so they are exempt from the format gate
+# (which otherwise red-flags every Publish PR on cosmetic JSON/Markdown differences).
+src/content/articles/
