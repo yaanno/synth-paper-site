@@ -1,7 +1,7 @@
 // @ts-check
 import { defineConfig } from 'astro/config';
 
-// GitHub Pages project site: https://yaanno.github.io/synth-paper/
+// GitHub Pages project site: https://yaanno.github.io/synth-paper-site/
 // `base` must match the repository name so asset/links resolve under the sub-path.
 //
 // Markdown is rendered by Astro's default Sätteri pipeline, which applies
@@ -9,5 +9,5 @@ import { defineConfig } from 'astro/config';
 // out of the box, so no extra Markdown configuration is required.
 export default defineConfig({
   site: 'https://yaanno.github.io',
-  base: '/synth-paper',
+  base: '/synth-paper-site',
 });

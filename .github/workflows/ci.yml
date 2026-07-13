@@ -1,0 +1,41 @@
+name: Site CI
+
+# Validate the Astro site on every PR and on pushes to main. This gives the human
+# reviewer a green check on the Publish PR (ADR-0003) before merging publishes.
+# The site is the whole repo now (ADR-0009), so no site/ path filter is needed.
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+# Least-privilege: this workflow only validates the site, so it needs no write
+# access to the repo (public-readiness / ADR-0007).
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Set up pnpm
+        uses: pnpm/action-setup@v4
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: pnpm
+          cache-dependency-path: pnpm-lock.yaml
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+      - name: Check formatting
+        run: pnpm format:check
+      - name: Lint
+        run: pnpm lint
+      - name: Type-check
+        run: pnpm typecheck
+      - name: Test
+        run: pnpm test
+      - name: Build
+        run: pnpm build
