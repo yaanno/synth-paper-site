@@ -1,0 +1,76 @@
+{
+  "schema_version": 1,
+  "slug": "gnn-power-grid-criticality-ranking",
+  "title": "Graph Neural Networks Rank Power Grid Criticality with Probabilistic Consistency",
+  "pitch_id": "pitch-3",
+  "beat": "ai-in-science",
+  "generated_by": "draft-node",
+  "model": "mistral/ministral-3b-latest",
+  "claims": [
+    {
+      "id": "c1",
+      "text": "The model trains a GNN on historical data from a simulated interdependent power-communication network.",
+      "source_refs": [
+        "s1"
+      ],
+      "verdict": {
+        "supported": true,
+        "note": "Source s1 explicitly describes training on a simulated interdependent power-communication network with historical data."
+      }
+    },
+    {
+      "id": "c2",
+      "text": "The model processes topological features (e.g., node degree, edge weights) and operational metrics (e.g., voltage fluctuations, communication latency) to generate probabilistic stability rankings.",
+      "source_refs": [
+        "s1"
+      ],
+      "verdict": {
+        "supported": true,
+        "note": "Source s1 mentions processing topological features (e.g., node degree) and operational metrics (e.g., voltage fluctuations, latency) for probabilistic stability rankings."
+      }
+    },
+    {
+      "id": "c3",
+      "text": "The model validates probabilistic rankings through cross-validation and backtesting against synthetic failure scenarios.",
+      "source_refs": [
+        "s1"
+      ],
+      "verdict": {
+        "supported": true,
+        "note": "Source s1 references cross-validation and backtesting against synthetic failure scenarios to validate probabilistic rankings."
+      }
+    },
+    {
+      "id": "c5",
+      "text": "The study highlights consistent probabilistic performance across cross-validation and backtesting.",
+      "source_refs": [
+        "s1"
+      ],
+      "verdict": {
+        "supported": true,
+        "note": "Source s1 states probabilistic performance is consistent across cross-validation and backtesting, though no explicit claim of 'highlighting' is made."
+      }
+    },
+    {
+      "id": "c7",
+      "text": "Testing is limited to synthetic networks; applicability to diverse infrastructures requires further validation.",
+      "source_refs": [
+        "s1"
+      ],
+      "verdict": {
+        "supported": true,
+        "note": "Source s1 acknowledges testing is limited to synthetic networks, implying further validation is needed for diverse infrastructures."
+      }
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "scheme": "arxiv_id",
+      "identifier": "2607.08918",
+      "title": "Graph Neural Networks for Predicting Criticality in Interdependent Power-Communication Networks (arXiv:2607.08918)",
+      "url": "https://arxiv.org/abs/2607.08918",
+      "allowlist_id": null
+    }
+  ]
+}
