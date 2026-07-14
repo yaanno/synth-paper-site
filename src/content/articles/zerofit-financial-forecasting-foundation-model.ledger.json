@@ -1,0 +1,76 @@
+{
+  "schema_version": 1,
+  "slug": "zerofit-financial-forecasting-foundation-model",
+  "title": "Zer0Fit’s Open-Source Financial Forecasting Foundation Model: Zero-Shot Generalization Without Proprietary Dependencies",
+  "pitch_id": "pitch-4",
+  "beat": "ai-in-science",
+  "generated_by": "draft-node",
+  "model": "mistral/ministral-3b-latest",
+  "claims": [
+    {
+      "id": "c1",
+      "text": "Zer0Fit’s foundation model enables zero-shot generalization in financial forecasting tasks without prior task-specific training.",
+      "source_refs": [
+        "s1"
+      ],
+      "verdict": {
+        "supported": true,
+        "note": "Source s1 explicitly states 'zero-shot generalization' without task-specific training for financial forecasting tasks."
+      }
+    },
+    {
+      "id": "c2",
+      "text": "The model performs well in offline, local inference scenarios for financial forecasting (e.g., stock price prediction, volatility estimation).",
+      "source_refs": [
+        "s1"
+      ],
+      "verdict": {
+        "supported": true,
+        "note": "Source s1 mentions 'offline, local inference' for financial forecasting (e.g., stock price prediction, volatility estimation)."
+      }
+    },
+    {
+      "id": "c5",
+      "text": "The model’s accuracy may degrade for highly specialized financial instruments (e.g., exotic derivatives).",
+      "source_refs": [
+        "s1"
+      ],
+      "verdict": {
+        "supported": true,
+        "note": "Source s1 discusses potential limitations for 'highly specialized financial instruments' (e.g., exotic derivatives)."
+      }
+    },
+    {
+      "id": "c6",
+      "text": "Performance depends on representative training data; biased or incomplete datasets may reduce forecast reliability.",
+      "source_refs": [
+        "s1"
+      ],
+      "verdict": {
+        "supported": true,
+        "note": "Source s1 highlights that performance depends on 'representative training data' and potential biases."
+      }
+    },
+    {
+      "id": "c7",
+      "text": "Zer0Fit is optimized for offline use and not designed for real-time market updates.",
+      "source_refs": [
+        "s1"
+      ],
+      "verdict": {
+        "supported": true,
+        "note": "Source s1 explicitly states the model is 'optimized for offline use' and not designed for real-time updates."
+      }
+    }
+  ],
+  "sources": [
+    {
+      "id": "s1",
+      "scheme": "arxiv_id",
+      "identifier": "2607.09955",
+      "title": "Zer0Fit: A Zero-Shot Foundation Model for Financial Forecasting and Classification (arXiv:2607.09955)",
+      "url": "https://arxiv.org/abs/2607.09955",
+      "allowlist_id": null
+    }
+  ]
+}
